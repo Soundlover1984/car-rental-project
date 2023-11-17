@@ -12,7 +12,7 @@ function Layout() {
           <Outlet />
         </Suspense>
       </Main>
-      <footer> © 2023 Denys Kovtun. All rights reserved.</footer>
+      {/* <footer> © 2023 Denys Kovtun. All rights reserved.</footer> */}
     </MainWrapper>
   );
 }

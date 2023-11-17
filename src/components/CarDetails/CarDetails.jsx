@@ -1,4 +1,6 @@
 import OpenModalButton from 'components/OpenModalButton/OpenModalButton';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import {
   Details,
@@ -12,11 +14,10 @@ import {
   TitleWrapper,
   Wrapper,
 } from './CarDetails.styled';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { getCarById } from 'redux/carsOperations';
 import CarInformation from 'components/CarInformation/CarInformation';
 import { addFavorite, removeFavorite } from 'redux/favoriteSlice';
+import { selectFavorite } from 'redux/selectors';
 
 
 const CarDetails = ({ car }) => {
@@ -35,28 +36,32 @@ const CarDetails = ({ car }) => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
-
+  const { favoriteCars } = useSelector(selectFavorite);
   const dispatch = useDispatch();
+  const companyAddress = address.split(',');
+  const country = companyAddress[2];
+  const city = companyAddress[1];
+
+  useEffect(() => {
+    if (favoriteCars.some(favCar => favCar.id === car.id)) {
+      setIsFavorite(true);
+    }
+  }, [favoriteCars, car]);
 
   const openModal = () => {
     setIsModalOpen(true);
-    const newCar = dispatch(getCarById(car.id));
-    console.log(newCar);
+    dispatch(getCarById(car.id));
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
   };
 
-  const companyAddress = address.split(',');
-  const country = companyAddress[2];
-  const city = companyAddress[1];
-
   const handleToFavorite = e => {
     e.stopPropagation();
     setIsFavorite(!isFavorite);
 
-    if (isFavorite) {
+    if (favoriteCars.some(favCar => favCar.id === car.id)) {
       dispatch(removeFavorite(car));
     } else {
       dispatch(addFavorite(car));

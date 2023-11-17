@@ -11,12 +11,6 @@ export const Wrapper = styled.div`
 
 export const ImageWrapper = styled.div`
   border-radius: 14px;
-  background: linear-gradient(
-      180deg,
-      rgba(18, 20, 23, 0.5) 2.5%,
-      rgba(18, 20, 23, 0) 41.07%
-    ),
-    url(<path-to-image>), lightgray 50% / cover no-repeat;
   width: 274px;
   height: 268px;
   max-width: 100%;
@@ -25,10 +19,12 @@ export const ImageWrapper = styled.div`
   transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
   cursor: pointer;
   margin-bottom: 14px;
+
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 1px 10px black;
   }
+
   &::before {
     content: '';
     position: absolute;
@@ -50,6 +46,7 @@ export const IconWrapper = styled.div`
   right: 14px;
   cursor: pointer;
   transition: transform 250ms ease-in-out;
+
   &:hover {
     transform: scale(1.5);
   }
@@ -90,6 +87,7 @@ export const Details = styled.p`
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 90%;
+  text-align: left;
 `;
 
 export const Separator = styled.span`

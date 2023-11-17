@@ -16,7 +16,7 @@ import { favoriteReducer } from './favoriteSlice';
 export const store = configureStore({
   reducer: {
     cars: carsReducer,
-    favorite: favoriteReducer,
+    favorites: favoriteReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
