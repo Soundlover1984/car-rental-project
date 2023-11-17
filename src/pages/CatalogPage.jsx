@@ -1,5 +1,6 @@
 import CatalogList from 'components/CatalogList/CatalogList';
 import LoadMoreButton from 'components/LoadMoreButton/LoadMoreButton';
+import FilterForm from 'components/FilterForm/FilterForm';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getFirstPage } from 'redux/carsOperations';
@@ -21,6 +22,7 @@ const Catalog = () => {
 
   return (
     <section>
+      <FilterForm />
       <CatalogList carsArray={cars} />
       {
         showButton && (
