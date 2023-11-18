@@ -1,14 +1,21 @@
+import { createObjectArray } from 'helpers/createObjectArray';
 import { Label, SelectInput, SelectWrapper } from './Select.styled';
+import brands from 'brands.json';
+import { priceArray } from 'helpers/createPriceArray';
+import { removeDublicates } from 'helpers/removeDublicates';
 
-const Select = ({ textLabel, name, options, width, handleChange, value }) => {
+const Select = ({ textLabel, name, width, handleChange, value, brand }) => {
+  const sortMakes = removeDublicates(brands);
+  const brandOptions = createObjectArray(sortMakes);
+  const priceOptions = createObjectArray(priceArray);
+
   return (
     <SelectWrapper width={width}>
       <Label htmlFor={name}>{textLabel}</Label>
       <SelectInput
         id={name}
-        options={options}
+        options={brand ? brandOptions : priceOptions}
         className="custom-select custom-select-menu"
-        closeMenuOnSelect={false}
         onChange={handleChange}
         value={value}
         styles={{
@@ -32,3 +39,4 @@ const Select = ({ textLabel, name, options, width, handleChange, value }) => {
 };
 
 export default Select;
+

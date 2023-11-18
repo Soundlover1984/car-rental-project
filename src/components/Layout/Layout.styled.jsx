@@ -7,7 +7,8 @@ display: flex;
 
 export const Main = styled.main`
 padding: 20px;
-width: 100%;
+width: 1440px;
 margin: 0 auto;
 text-align: center;
+padding-left: 200px;
 `;

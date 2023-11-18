@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Aside = styled.aside`
   padding: 20px;
   width: 200px;
+  position: fixed;
 `;
 
 export const Logo = styled.p`

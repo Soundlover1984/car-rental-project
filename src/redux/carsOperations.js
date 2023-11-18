@@ -15,6 +15,18 @@ export const getCars = createAsyncThunk(
   }
 );
 
+export const getAllCarsForFilter = createAsyncThunk(
+  'adverts/getForFilter',
+  async (_, thunkAPI) => {
+    try {
+      const response = await axios.get('/adverts');
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
 export const getFirstPage = createAsyncThunk(
   'adverts/getFirst',
   async (_, thunkAPI) => {

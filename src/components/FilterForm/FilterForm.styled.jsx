@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NumericFormat } from 'react-number-format';
 
 export const Filter = styled.form`
   margin: 0 auto;
@@ -6,6 +7,7 @@ export const Filter = styled.form`
   display: flex;
   justify-content: center;
   gap: 18px;
+  flex-wrap: wrap;
 `;
 
 export const MileageWrapper = styled.div`
@@ -35,7 +37,26 @@ export const Label = styled.p`
   top: 15px;
 `;
 
-export const Input = styled.input`
+export const SearchButton = styled.button`
+  align-self: end;
+  padding: 14px 44px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: var(--accent-color);
+  color: var(--invert-color);
+  transition: background-color 250ms ease-in-out;
+  cursor: pointer;
+  border: none;
+  &:hover {
+    background-color: var(--accent-hover);
+  }
+  &:disabled {
+    background-color: var(--secondary-color);
+    opacity: 0.8;
+    cursor: auto;
+  }`;
+
+export const Input = styled(NumericFormat)`
   padding-left: ${props => props.padding};
   width: 160px;
   height: 48px;

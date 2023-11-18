@@ -1,5 +1,5 @@
 export const createObjectArray = array => {
-    const options = array.map((option, idx) => ({
+    const options = array.map(option => ({
       value: option,
       label: option,
     }));

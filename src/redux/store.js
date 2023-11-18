@@ -11,12 +11,14 @@ import {
 
 import { carsReducer } from './carsSlice';
 import { favoriteReducer } from './favoriteSlice';
+import { filterReducer } from './filterSlice';
 
 
 export const store = configureStore({
   reducer: {
     cars: carsReducer,
     favorites: favoriteReducer,
+    filter: filterReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

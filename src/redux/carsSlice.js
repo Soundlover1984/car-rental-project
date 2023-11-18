@@ -1,10 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getCars, getFirstPage } from './carsOperations';
+import { getCars, getFirstPage, getAllCarsForFilter } from './carsOperations';
 
 const initialState = {
   cars: [],
   isLoading: false,
   error: null,
+  filterCars: [],
 };
 
 const handlePending = state => {
@@ -35,7 +36,11 @@ export const carsSlice = createSlice({
       .addCase(getFirstPage.rejected, handleRejected)
       .addCase(getCars.pending, handlePending)
       .addCase(getCars.fulfilled, handleGetCarsFulfilled)
-      .addCase(getCars.rejected, handleRejected),
+      .addCase(getCars.rejected, handleRejected)
+      .addCase(getAllCarsForFilter.pending, handlePending)
+      .addCase(getAllCarsForFilter.fulfilled, handleFirstPageFulfilled)
+      .addCase(getAllCarsForFilter.rejected, handleRejected),
+
 });
 
 export const carsReducer = carsSlice.reducer;

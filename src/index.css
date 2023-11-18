@@ -1,5 +1,6 @@
 body {
-    margin: 0;
+  width: 1440px;
+  margin: 0 auto;
     font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI','Montserrat', 'Roboto',
       sans-serif;
     -webkit-font-smoothing: antialiased;
