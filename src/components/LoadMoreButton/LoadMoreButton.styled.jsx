@@ -8,5 +8,9 @@ export const Button = styled.button`
   text-decoration-line: underline;
   background-color: transparent;
   border: none;
+  transition: color 250ms ease-in-out;
+  :hover {
+    color: var(--button-hover);
+  }
   cursor: pointer;
 `;

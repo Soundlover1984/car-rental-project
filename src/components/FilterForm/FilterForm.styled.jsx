@@ -42,13 +42,13 @@ export const SearchButton = styled.button`
   padding: 14px 44px;
   height: 48px;
   border-radius: 12px;
-  background-color: var(--accent-color);
+  background-color: var(--button-color);
   color: var(--invert-color);
   transition: background-color 250ms ease-in-out;
   cursor: pointer;
   border: none;
   &:hover {
-    background-color: var(--accent-hover);
+    background-color: var(--button-hover);
   }
   &:disabled {
     background-color: var(--secondary-color);

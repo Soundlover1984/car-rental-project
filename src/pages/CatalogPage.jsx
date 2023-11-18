@@ -43,7 +43,19 @@ const Catalog = () => {
         setFiltering={setFiltering}
         setShowButton={setShowButton}
       />
-      <CatalogList carsArray={filtering ? filterCars : cars} />
+       {filtering ? (
+        filterCars.length === 0 ? (
+          <p>
+            Apologies, no results were found here. Consider adjusting your search parameters for better outcomes...
+          </p>
+        ) : (
+          <CatalogList carsArray={filterCars} />
+        )
+      ) : (
+        <CatalogList carsArray={cars} />
+      )}
+
+
       {!filtering &&
         (isLoading ? (
           <div>Loading cars...</div>

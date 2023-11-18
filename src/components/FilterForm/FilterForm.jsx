@@ -15,7 +15,7 @@ import {
 } from './FilterForm.styled';
 
 
-const FilterForm = ({ setFilterCars, setFiltering, setShowButton }) => {
+const FilterForm = ({ setFiltering, setShowButton }) => {
   const [valuePrice, setValuePrice] = useState({
     value: '',
     label: 'To $',
@@ -82,7 +82,7 @@ const FilterForm = ({ setFilterCars, setFiltering, setShowButton }) => {
     setFiltering(true);
   };
 
-  const handleClearClick = e => {
+  const handleResetClick = e => {
     e.preventDefault();
     dispatch(getFirstPage());
     setFiltering(false);
@@ -152,8 +152,8 @@ const FilterForm = ({ setFilterCars, setFiltering, setShowButton }) => {
       <SearchButton onClick={handleSearchClick} disabled={isDisabled}>
         Search
       </SearchButton>
-      <SearchButton onClick={handleClearClick} disabled={isDisabled}>
-        Clear
+      <SearchButton onClick={handleResetClick} disabled={isDisabled}>
+        Reset Search
       </SearchButton>
     </Filter>
   );
