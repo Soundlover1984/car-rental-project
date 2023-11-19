@@ -1,18 +1,19 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Main, MainWrapper } from './Layout.styled';
-import HeaderBar from 'components/HeaderBar/HeaderBar';
+import AppBar from 'components/AppBar/AppBar';
+import Footer from 'components/Footer/Footer';
 
 function Layout() {
   return (
     <MainWrapper>
-      <HeaderBar/>
+      <AppBar/>
       <Main>
         <Suspense fallback={<div>Loading...</div>}>
           <Outlet />
         </Suspense>
       </Main>
-      {/* <footer> © 2023 Denys Kovtun. All rights reserved.</footer> */}
+      <Footer />
     </MainWrapper>
   );
 }

@@ -153,7 +153,7 @@ const FilterForm = ({ setFiltering, setShowButton }) => {
         Search
       </SearchButton>
       <SearchButton onClick={handleResetClick} disabled={isDisabled}>
-        Reset Search
+        Reset
       </SearchButton>
     </Filter>
   );

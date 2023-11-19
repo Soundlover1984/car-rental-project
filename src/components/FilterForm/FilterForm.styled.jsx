@@ -8,6 +8,7 @@ export const Filter = styled.form`
   justify-content: center;
   gap: 18px;
   flex-wrap: wrap;
+  margin-top: 30px;
 `;
 
 export const MileageWrapper = styled.div`

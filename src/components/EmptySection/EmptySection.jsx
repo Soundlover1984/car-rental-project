@@ -1,4 +1,6 @@
-import {Section, Button } from './EmptySection.styled';
+import {Section} from './EmptySection.styled';
+import CatalogLink from 'components/CatalogLink/CatalogLink';
+import cars from 'assets/vehicles.png';
 
 const EmptySection = () => {
   return (
@@ -6,7 +8,8 @@ const EmptySection = () => {
       <p>
       Apologies, there doesn't seem to be any content here. Navigate to the catalog to include cars in your favorites.
       </p>
-      <Button to="/catalog">Catalog</Button>
+      <img src={cars} alt="vehicles" />
+      <CatalogLink text="Catalog" />
     </Section>
   );
 };
