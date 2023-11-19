@@ -10,6 +10,9 @@ export const SelectWrapper = styled.div`
 export const Label = styled.label`
   display: block;
   margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--label-color);
 `;
 
 export const SelectInput = styled(Select)`

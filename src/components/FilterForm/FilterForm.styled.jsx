@@ -18,6 +18,9 @@ export const MileageWrapper = styled.div`
 export const LabelMileage = styled.label`
   display: block;
   margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--label-color);
 `;
 
 export const Mileage = styled.div`
@@ -41,7 +44,9 @@ export const Label = styled.p`
 export const SearchButton = styled.button`
   align-self: end;
   padding: 14px 44px;
-  height: 48px;
+  font-weight: 600;
+  font-size: 14px;
+   height: 48px;
   border-radius: 12px;
   background-color: var(--button-color);
   color: var(--invert-color);

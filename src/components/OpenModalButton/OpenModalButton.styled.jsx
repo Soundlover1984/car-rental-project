@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const Button = styled.button`
   background-color: var(--button-color);
+  font-weight: 600;
+  font-size: 14px;
   color: var(--invert-color);
   transition: background-color 250ms ease-in-out;
   width: 100%;
