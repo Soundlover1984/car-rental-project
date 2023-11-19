@@ -5,10 +5,10 @@ import cars from 'assets/vehicles.png';
 const EmptySection = () => {
   return (
     <Section>
-      <p>
+      <p style={{ marginTop: '50px' }}>
       Apologies, there doesn't seem to be any content here. Navigate to the catalog to include cars in your favorites.
       </p>
-      <img src={cars} alt="vehicles" />
+      <img src={cars} alt="vehicles" style={{ marginTop: '50px' }}/>
       <CatalogLink text="Catalog" />
     </Section>
   );
