@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const FooterStyle = styled.footer`
   text-align: center;
   padding: 20px;
-  padding-left: 120px;
-  margin-top: 100px;
+  margin-top: 140px;
+  margin-left: 160px;
 `;
 
 export const Link = styled.a`
