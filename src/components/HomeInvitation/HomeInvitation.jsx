@@ -14,7 +14,7 @@ const HomeInvitation = () => {
       Experience a journey that is both comfortable and unforgettable through our rental service. 
       Begin your exploration with us today!
         </Text>
-        <CatalogLink text="Get started" />
+        <CatalogLink text="Start now" />
       </TextWrapper>
       <Image src={pic} alt="default cars image" width="100%" />
     </>
