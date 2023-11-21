@@ -25,7 +25,8 @@ Users can browse and filter advertisements in the catalog.
 Users can add advertisements to their favorites list.
 Users can view detailed information about each advertisement in a modal window.
 The modal window can be closed by clicking the "x" button, clicking outside the modal window, or pressing the "Esc" key.
-Users can contact the car rental company by clicking the "Rent a Car" link, which provides the company's phone number: +380730000000.
+Users can contact the car rental company by clicking the "Сontact us" link, which provides the company's phone number: +380730000000.
+
 Additional Features
 
 The application also includes additional features:
