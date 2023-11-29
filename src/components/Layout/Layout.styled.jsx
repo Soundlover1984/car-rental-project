@@ -2,14 +2,22 @@
 import styled from 'styled-components';
 
 export const MainWrapper = styled.div`
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 `;
 
 export const Main = styled.main`
-padding: 20px;
-width: 1440px;
-margin: 0 auto;
-text-align: center;
-padding-left: 200px;
+  padding-top: 100px;
+  max-width: 1440px;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  /* padding-left: 200px; */
+`;
+
+export const Container = styled.div`
+  /* max-width: 1440px; */
+  padding: 0 20px;
 `;

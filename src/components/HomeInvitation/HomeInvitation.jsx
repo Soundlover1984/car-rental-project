@@ -1,6 +1,7 @@
 import pic from 'assets/rental-cars.png';
 import CatalogLink from 'components/CatalogLink/CatalogLink';
 import { Text, TextWrapper, Image } from './HomeInvitation.styled';
+import ContactButton from 'components/ContactButton/ContactButton';
 
 const HomeInvitation = () => {
   return (
@@ -17,6 +18,7 @@ const HomeInvitation = () => {
         <CatalogLink text="Start now" />
       </TextWrapper>
       <Image src={pic} alt="default cars image" width="100%" />
+      <ContactButton text="Contact us" />
     </>
   );
 };

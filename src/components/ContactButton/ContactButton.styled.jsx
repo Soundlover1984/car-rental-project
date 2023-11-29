@@ -12,7 +12,7 @@ export const Button = styled(NavLink)`
   text-align: center;
   display: block;
   width: 130px;
-  margin-top: 300px;
+  margin-top: 50px;
   cursor: pointer;
   &:hover {
     background-color: var(--button-hover);
