@@ -7,6 +7,7 @@ import { getFirstPage, getAllCarsForFilter } from 'redux/carsOperations';
 import { selectCars } from 'redux/selectors';
 import { selectFilter } from 'redux/selectors';
 import { getFilteredCars } from 'helpers/getFilteredCars';
+import Loader from 'components/Loader/Loader';
 
 const Catalog = () => {
 
@@ -58,7 +59,7 @@ const Catalog = () => {
 
       {!filtering &&
         (isLoading ? (
-          <div>Loading cars...</div>
+          <Loader />
         ) : (
           showButton && (
             <LoadMoreButton

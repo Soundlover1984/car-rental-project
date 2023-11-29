@@ -1,17 +1,22 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Main, MainWrapper } from './Layout.styled';
+import {Container, Main, MainWrapper } from './Layout.styled';
 import AppBar from 'components/AppBar/AppBar';
 import Footer from 'components/Footer/Footer';
+import Loader from 'components/Loader/Loader';
 
 function Layout() {
   return (
     <MainWrapper>
+       <Container>
       <AppBar/>
+      </Container>
       <Main>
-        <Suspense fallback={<div>Loading...</div>}>
+      <Container>
+        <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
+        </Container>
       </Main>
       <Footer />
     </MainWrapper>

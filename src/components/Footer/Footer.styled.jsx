@@ -4,7 +4,6 @@ export const FooterStyle = styled.footer`
   text-align: center;
   padding: 20px;
   margin-top: 60px;
-  margin-left: 160px;
 `;
 
 export const Link = styled.a`
