@@ -3,7 +3,7 @@ import { LoadWrapper } from './Loader.styled';
 const Loader = () => {
   return (
     <LoadWrapper>
-      <span class="loader"></span>
+      <span className="loader"></span>
     </LoadWrapper>
   );
 };

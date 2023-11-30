@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { setFilter } from 'redux/filterSlice';
 import { getFirstPage } from 'redux/carsOperations';
 import Select from  'components/Select/Select';
+
+
 import {
   Filter,
   Input,
@@ -73,7 +75,7 @@ const FilterForm = ({ setFiltering, setShowButton }) => {
   const handleSearchClick = async e => {
     e.preventDefault();
     const newFilterQuery = {
-      make: valueBrand.value.toLowerCase().trim(),
+      make: valueBrand.value.toLowerCase().trim() || '',
       price: price || '500',
       mileageMin: mileageMin.split(',').join('') || 0,
       mileageMax: mileageMax.split(',').join('') || 99999,

@@ -1,11 +1,11 @@
 import { createObjectArray } from 'helpers/createObjectArray';
 import { Label, SelectInput, SelectWrapper } from './Select.styled';
-import brands from 'brands.json';
+import makes from 'makes.json';
 import { priceArray } from 'helpers/createPriceArray';
 import { removeDublicates } from 'helpers/removeDublicates';
 
 const Select = ({ textLabel, name, width, handleChange, value, brand }) => {
-  const sortMakes = removeDublicates(brands);
+  const sortMakes = removeDublicates(makes);
   const brandOptions = createObjectArray(sortMakes);
   const priceOptions = createObjectArray(priceArray);
 
