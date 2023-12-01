@@ -7,7 +7,7 @@ const AppBar = () => {
   return (
     <Header>
       <Logo to="/">
-          <LogoImg src={carLogo} alt="logo" width="290" height="145"  />
+          <LogoImg src={carLogo} alt="logo" width="200" height="80"  />
         </Logo>
       <Navi>
         <Link to="/">Home</Link>

@@ -8,9 +8,9 @@ import Loader from 'components/Loader/Loader';
 function Layout() {
   return (
     <MainWrapper>
-       <Container>
+       {/* <Container> */}
       <AppBar/>
-      </Container>
+      {/* </Container> */}
       <Main>
       <Container>
         <Suspense fallback={<Loader />}>

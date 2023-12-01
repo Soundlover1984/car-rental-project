@@ -21,3 +21,7 @@ export const Button = styled(NavLink)`
     background-color: var(--button-hover);
   }
 `;
+
+export const Image = styled.img`
+  margin-top: 80px;
+`;
