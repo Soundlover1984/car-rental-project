@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { tablet, max } from 'styles/mediaSizes';
 
 export const Container = styled(motion.div)`
   position: fixed;
@@ -11,6 +12,15 @@ export const Container = styled(motion.div)`
   border-radius: 24px;
   box-shadow: 0px 4px 57px 0px rgba(17, 17, 17, 0.05);
   z-index: 1000;
+  ${max(500)} {
+    width: 90%;
+    top: 10px;
+  }
+  ${max(tablet)} {
+    top: 20px;
+    overflow-y: auto;
+    margin-top:100px;
+  }
 `;
 
 export const Backdrop = styled.div`
@@ -28,6 +38,10 @@ export const Content = styled.div`
   width: 541px;
   padding: 20px;
   border-radius: 5px;
+
+  ${max(tablet)} {
+    overflow-y: auto;
+  }
 `;
 
 export const CloseButton = styled.button`
@@ -39,9 +53,15 @@ export const CloseButton = styled.button`
   border: none;
   outline: none;
   font-size: 24px;
-  transition: color 500ms ease-in-out;
-  :hover {
-    color: var(--button-color);
-  }
   padding: 0;
+  transition: color 500px ease-in-out;
+
+  :hover {
+    color: var(--accent-color);
+  }
+
+  ${max(500)} {
+    top: 4px;
+    right: 4px;
+  }
 `;
