@@ -45,7 +45,8 @@ Navigate to the project directory in your terminal.
 Execute the command npm install to install the necessary dependencies.
 Execute the command npm start to start the development server.
 Open a web browser and go to http://localhost:3000 to use the application.
-Deployment
+
+Deployment:
 
 The application is deployed on GitHub Pages at https://github.com. You can access it online here: https://github.com/Soundlover1984/car-rental-project.
 
