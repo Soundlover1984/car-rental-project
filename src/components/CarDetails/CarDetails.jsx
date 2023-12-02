@@ -1,6 +1,7 @@
 import OpenModalButton from 'components/OpenModalButton/OpenModalButton';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { AnimatePresence } from 'framer-motion';
 
 import {
   Details,
@@ -97,13 +98,15 @@ const CarDetails = ({ car }) => {
         <Separator> | </Separator> {functionalities[0]}
       </Details>
       <OpenModalButton car={car} onClick={openModal} />
-      {isModalOpen && (
-        <CarInformation
-          isModalOpen={isModalOpen}
-          closeModal={closeModal}
-          car={car}
-        />
-      )}
+      <AnimatePresence>
+        {isModalOpen && (
+          <CarInformation
+            isModalOpen={isModalOpen}
+            closeModal={closeModal}
+            car={car}
+          />
+        )}
+      </AnimatePresence>
     </Wrapper>
   );
 };

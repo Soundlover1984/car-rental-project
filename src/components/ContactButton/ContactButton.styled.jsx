@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 export const Button = styled(NavLink)`
   background-color: var(--button-color);
   color: var(--invert-color);
-  transition: background-color 250ms ease-in-out;
+  transition: background-color 500ms ease-in-out;
   border-radius: 12px;
   border: none;
   padding: 12px 0px;

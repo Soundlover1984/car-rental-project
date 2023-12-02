@@ -5,7 +5,7 @@ export const Button = styled.button`
   font-weight: 600;
   font-size: 14px;
   color: var(--invert-color);
-  transition: background-color 250ms ease-in-out;
+  transition: background-color 500ms ease-in-out;
   width: 100%;
   border-radius: 12px;
   border: none;

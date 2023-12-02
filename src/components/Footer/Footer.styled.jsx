@@ -10,7 +10,7 @@ export const Link = styled.a`
   position: relative;
   font-size: 16px;
   color: var(--primary-color);
-  transition: color 250ms ease-in-out;
+  transition: color 500ms ease-in-out;
   &:hover {
   color: var(--button-color);
   }
