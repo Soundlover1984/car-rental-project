@@ -22,22 +22,7 @@ export const Logo = styled(NavLink)`
     0 4px 3px #bec6e9, 0 5px 3px #a9a6a6;
  
 `;
-export const Navi = styled.nav`
-  display: flex;
-  gap: 50px;
-`;
 
-export const Link = styled(NavLink)`
-  font-size: 20px;
-  :hover {
-    color: var(--button-color);
-    font-weight: 500;
-  }
-
-  &.active {
-    color: var(--button-color);
-  }
-`;
 
 export const LogoImg = styled.img`
   width: 100%;

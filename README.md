@@ -17,7 +17,7 @@ The favorites page displays advertisements that users have added to their favori
 
 # Technical Details
 
-The application is developed using React and React Router for routing. It uses its own API based on Mockapi.io to manage advertisements. The API includes the following fields for each advertisement: id, year, make, model, type, img, description, fuelConsumption, engineSize, accessories, functionalities, rentalPrice, rentalCompany, address, rentalConditions, and mileage.
+The application is developed using React and React Router for routing. It uses its own API based on Mockapi.io to manage advertisements. The API includes the following fields for each advertisement: id, year, make, model, type, img, description, fuelConsumption, engineSize, accessories, functionalities, rentalPrice, rentalCompany, address, rentalConditions and mileage.
 
 The application includes the following functionality:
 
