@@ -10,6 +10,7 @@ import './styles/loader.css';
 import './styles/variables.css';
 import './styles/fonts.css';
 import { PersistGate } from 'redux-persist/integration/react';
+import './styles/scroll.css';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -91,3 +91,6 @@ ul {
   cursor: pointer;
 }
  
+* {
+  scroll-behavior: smooth;
+}

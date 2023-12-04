@@ -8,6 +8,7 @@ import { selectCars } from 'redux/selectors';
 import { selectFilter } from 'redux/selectors';
 import { getFilteredCars } from 'helpers/getFilteredCars';
 import Loader from 'components/Loader/Loader';
+import ScrollButton from 'components/ScrollButton/ScrollButton';
 
 const Catalog = () => {
 
@@ -39,15 +40,16 @@ const Catalog = () => {
 
   return (
     <section>
-        <FilterForm
+      <FilterForm
         setFilterCars={setFilterCars}
         setFiltering={setFiltering}
         setShowButton={setShowButton}
       />
-       {filtering ? (
+      {filtering ? (
         filterCars.length === 0 ? (
           <p>
-            Apologies, no results were found here. Consider adjusting your search parameters for better outcomes...
+            Apologies, no results were found here. Consider adjusting your
+            search parameters for better outcomes...
           </p>
         ) : (
           <CatalogList carsArray={filterCars} />
@@ -55,7 +57,6 @@ const Catalog = () => {
       ) : (
         <CatalogList carsArray={cars} />
       )}
-
 
       {!filtering &&
         (isLoading ? (
@@ -69,6 +70,7 @@ const Catalog = () => {
             />
           )
         ))}
+      <ScrollButton />
     </section>
   );
 };
