@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { max, tablet } from 'styles/media';
 
 export const Button = styled.button`
   background-color: var(--button-color);
@@ -14,5 +15,9 @@ export const Button = styled.button`
   cursor: pointer;
   &:hover {
     background-color: var(--button-hover);
+  }
+  ${max(tablet)} {
+    width: 100%;
+    padding: 18px 44px;
   }
 `;
