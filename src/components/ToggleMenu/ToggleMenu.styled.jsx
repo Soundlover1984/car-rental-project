@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Button = styled.button`
   outline: none;
@@ -11,4 +12,15 @@ export const Button = styled.button`
   height: 50px;
   border-radius: 50%;
   background: transparent;
+  color: var(--button-color);
+  &:hover {
+    color: var(--button-hover);
+  }
+`;
+
+export const Path = styled(motion.path)`
+  fill: transparent;
+  stroke-width: 3;
+  stroke: currentColor;
+  stroke-linecap: round;
 `;

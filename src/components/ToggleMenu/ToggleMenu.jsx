@@ -1,16 +1,5 @@
 import * as React from 'react';
-import { motion } from 'framer-motion';
-import { Button } from './ToggleMenu.styled';
-
-const Path = props => (
-  <motion.path
-    fill="transparent"
-    strokeWidth="3"
-    stroke="#0B44CD"
-    strokeLinecap="round"
-    {...props}
-  />
-);
+import { Button, Path } from './ToggleMenu.styled';
 
 export const ToggleMenu = ({ toggle }) => (
   <Button onClick={toggle}>
