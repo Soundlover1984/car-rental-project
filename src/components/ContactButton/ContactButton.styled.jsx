@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { max, tablet } from 'styles/media';
+import { max, tablet } from 'styles/mediaSizes';
 import { NavLink } from 'react-router-dom';
 
 export const Button = styled(NavLink)`

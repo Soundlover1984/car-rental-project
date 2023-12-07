@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import { max, tablet } from 'styles/mediaSizes';
 
 export const Button = styled(NavLink)`
   background-color: var(--button-color);
@@ -13,5 +14,9 @@ export const Button = styled(NavLink)`
   cursor: pointer;
   &:hover {
     background-color: var(--button-hover);
+  }
+  ${max(tablet)} {
+    width: 100%;
+    padding: 18px 44px;
   }
 `;

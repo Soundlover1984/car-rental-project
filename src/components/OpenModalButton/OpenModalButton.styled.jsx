@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { max, tablet } from 'styles/media';
+import { max, tablet } from 'styles/mediaSizes';
 
 export const Button = styled.button`
   background-color: var(--button-color);

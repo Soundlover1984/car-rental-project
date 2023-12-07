@@ -44,9 +44,8 @@ const menu = [
 export const MobileNavigation = ({ onClose }) => (
   <NavList variants={variants}>
     {menu.map(({ id, name, src }) => (
-      <NavItem>
+      <NavItem key={id}>
         <Link
-          key={id}
           variants={variantsLink}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
